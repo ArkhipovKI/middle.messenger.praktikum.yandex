@@ -1,0 +1,40 @@
+.field {
+	position: relative;
+
+	input[type="text"].text-field {
+		border-bottom: 1px solid #3369f3;
+		padding: 7px 0;
+		width: 100%;
+		text-align: left;
+	}
+
+	input[type="text"].text-field:not(:last-child) {
+		margin-bottom: 25px;
+	}
+
+	label {
+		margin: 20px 0;
+		position: relative;
+		display: inline-block;
+	}
+
+	span {
+		pointer-events: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition: 0.2s;
+		transition-timing-function: ease;
+		transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+		opacity: 0.5;
+	}
+
+	input {
+		padding: 10px;
+	}
+
+	input:focus + span,
+	input:not(:placeholder-shown) + span {
+		transform: scale(0.8) translateY(-120%) translateX(-10%);
+	}
+}
